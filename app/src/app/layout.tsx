@@ -6,31 +6,52 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: {
     template: '%s - NotTaxAdvice.ai',
-    default: 'NotTaxAdvice - Understand Your Taxes Clearly',
+    default: 'NotTaxAdvice.ai — Understand Your Taxes Clearly',
   },
   description:
     'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+
+  icons: {
+    icon: '/favicon.ico',
+  },
+
   openGraph: {
     title: 'NotTaxAdvice.ai',
     description:
       'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
     url: 'https://nottaxadvice.ai',
     siteName: 'NotTaxAdvice.ai',
+    images: [
+      {
+        url: 'https://nottaxadvice.ai/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'NotTaxAdvice.ai — Plain-English tax explanations',
+      },
+    ],
     type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NotTaxAdvice.ai',
+    description:
+      'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+    images: ['https://nottaxadvice.ai/og.png'],
   },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
         <link
           rel="stylesheet"
-          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
+          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&display=swap"
         />
         <link
           rel="alternate"
