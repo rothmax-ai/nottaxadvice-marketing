@@ -8,8 +8,9 @@ export const metadata: Metadata = {
     template: '%s - NotTaxAdvice.ai',
     default: 'NotTaxAdvice.ai — Understand Your Taxes Clearly',
   },
+
   description:
-    'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+    'Plain-English explanations of your taxes. Upload your return, see how the numbers work, and understand how today’s decisions affect future taxes — with no advice, no black boxes.',
 
   icons: {
     icon: '/favicon.ico',
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NotTaxAdvice.ai',
     description:
-      'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+      'Plain-English explanations of your taxes. Upload your return, see how the numbers work, and understand how today’s decisions affect future taxes — with no advice, no black boxes.',
     url: 'https://nottaxadvice.ai',
     siteName: 'NotTaxAdvice.ai',
     images: [
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NotTaxAdvice.ai',
     description:
-      'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+      'Plain-English explanations of your taxes. Upload your return, see how the numbers work, and understand how today’s decisions affect future taxes.',
     images: ['https://nottaxadvice.ai/og.png'],
   },
 }
