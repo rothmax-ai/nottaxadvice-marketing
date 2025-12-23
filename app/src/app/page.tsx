@@ -7,14 +7,8 @@ import { Gradient } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Heading, Subheading } from '@/components/text'
-import type { Metadata } from 'next'
 import OldNewWaySection from "@/components/OldNewWaySection";
 import ProductExplanationSection from '@/components/ProductExplanationSection'
-
-export const metadata: Metadata = {
-  description:
-    'Plain-English explanations of your taxes. Upload your return and see how today’s decisions affect future taxes.',
-}
 
 function Hero() {
   return (
