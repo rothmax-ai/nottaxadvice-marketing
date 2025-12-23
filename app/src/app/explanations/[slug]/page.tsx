@@ -15,16 +15,17 @@ async function getExplanation(slug: string) {
       body
     }
     `,
-    { slug }
+    { slug },
   )
 }
 
 export default async function ExplanationPage({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const explanation = await getExplanation(params.slug)
+  const { slug } = await params
+  const explanation = await getExplanation(slug)
 
   if (!explanation) {
     notFound()
@@ -42,9 +43,7 @@ export default async function ExplanationPage({
         {/* ------------------------------------------------------------------ */}
 
         <article className="mx-auto mt-16 max-w-3xl">
-          {/* ------------------------------ */}
-          {/* Header                         */}
-          {/* ------------------------------ */}
+          {/* Header */}
           <header className="mb-16">
             <p className="text-sm font-medium tracking-wide text-gray-500 uppercase">
               Explanation
@@ -61,15 +60,15 @@ export default async function ExplanationPage({
             )}
           </header>
 
-          {/* ------------------------------ */}
-          {/* Body                           */}
-          {/* ------------------------------ */}
-          <div className="prose prose-gray prose-lg max-w-none
-                          prose-headings:font-semibold
-                          prose-headings:tracking-tight
-                          prose-headings:text-gray-950
-                          prose-p:leading-7
-                          prose-li:leading-7">
+          {/* Body */}
+          <div
+            className="prose prose-gray prose-lg max-w-none
+              prose-headings:font-semibold
+              prose-headings:tracking-tight
+              prose-headings:text-gray-950
+              prose-p:leading-7
+              prose-li:leading-7"
+          >
             <PortableText value={explanation.body} />
           </div>
         </article>
