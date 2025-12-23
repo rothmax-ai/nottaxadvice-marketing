@@ -45,12 +45,13 @@ async function getExplanationsByCategory(
 export default async function ExplanationCategoryPage({
   params,
 }: {
-  params: { category: string }
+  params: Promise<{ category: string }>
 }) {
-  const categorySlug = params.category
-  const categoryTitle = toTitleCase(categorySlug)
+  // ✅ Next.js 15 requires awaiting params
+  const { category } = await params
 
-  const explanations = await getExplanationsByCategory(categorySlug)
+  const categoryTitle = toTitleCase(category)
+  const explanations = await getExplanationsByCategory(category)
 
   return (
     <main>
