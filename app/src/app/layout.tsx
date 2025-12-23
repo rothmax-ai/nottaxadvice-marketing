@@ -8,6 +8,16 @@ export const metadata: Metadata = {
     template: '%s - NotTaxAdvice.ai',
     default: 'NotTaxAdvice - Understand Your Taxes Clearly',
   },
+  description:
+    'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+  openGraph: {
+    title: 'NotTaxAdvice.ai',
+    description:
+      'Plain-English explanations of your taxes. Understand how today’s decisions affect future taxes.',
+    url: 'https://nottaxadvice.ai',
+    siteName: 'NotTaxAdvice.ai',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
