@@ -19,7 +19,7 @@
     "dayjs": "^1.11.13",
     "feed": "^5.1.0",
     "framer-motion": "^12.23.26",
-    "next": "15.4.4",
+    "next": "^15.5.9",
     "next-sanity": "^10.1.4",
     "react": "^19",
     "react-dom": "^19",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.15",
+    "@types/next": "^8.0.7",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
