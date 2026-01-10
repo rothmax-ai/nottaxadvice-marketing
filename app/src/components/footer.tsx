@@ -93,6 +93,7 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="/terms">Terms of service</SitemapLink>
           <SitemapLink href="/privacy">Privacy policy</SitemapLink>
+          <SitemapLink href="/refunds">Refund policy</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -150,6 +151,9 @@ function Copyright() {
   return (
     <div className="text-sm/6 text-gray-950">
       &copy; {new Date().getFullYear()} NotTaxAdvice.ai. All rights reserved.
+      <span className="block text-gray-500">
+        NotTaxAdvice.ai is operated by AI Lantern Labs LLC.
+      </span>
       <span className="block text-gray-500">
         Educational explanations only. Not tax advice.
       </span>
