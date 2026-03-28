@@ -10,6 +10,7 @@
     "typegen": "sanity schema extract --path=src/sanity/extract.json && sanity typegen generate && rm ./src/sanity/extract.json"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "@headlessui/react": "^2.2.6",
     "@heroicons/react": "^2.2.0",
     "@sanity/icons": "^3.7.4",
