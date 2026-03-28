@@ -15,34 +15,41 @@ export default function RefundsPage() {
           Refund Policy
         </Heading>
 
-        <div className="mt-12 max-w-3xl space-y-6 text-sm text-gray-600">
+        <div className="mt-12 max-w-3xl space-y-8 text-sm text-gray-600">
           <p>
             This Refund Policy applies to purchases made on NotTaxAdvice.ai
             (“NotTaxAdvice”), an educational software platform operated by
             AI Lantern Labs LLC.
           </p>
 
-          <p>
-            NotTaxAdvice provides access to educational software and simulation
-            tools through the use of usage credits.
-          </p>
+          <section className="space-y-3">
+            <p>
+              NotTaxAdvice provides access to educational software and
+              simulation tools through the use of usage credits.
+            </p>
 
-          <p>
-            <strong>Unused credits are refundable</strong> upon request. Credits
-            that have been used are <strong>not refundable</strong>, as the
-            educational service has already been delivered.
-          </p>
+            <p>
+              <strong>Unused credits are refundable</strong> upon request.
+              Credits that have been used are <strong>not refundable</strong>,
+              as the educational service has already been delivered.
+            </p>
 
-          <p>
-            Credits do not expire, have no cash value outside the Service, and
-            are non-transferable. We do not offer refunds for services that have
-            already been used.
-          </p>
+            <p>
+              Credits do not expire, are non-transferable, and have no cash
+              value outside the Service.
+            </p>
 
-          <p>
-            If a purchase includes both used and unused credits, we may issue a
-            partial refund for the unused portion at our discretion.
-          </p>
+            <p>
+              If a purchase includes both used and unused credits, we may issue
+              a partial refund for the unused portion at our discretion.
+            </p>
+
+            <p>
+              We reserve the right to deny refund requests that appear
+              fraudulent, abusive, or inconsistent with normal use of the
+              Service.
+            </p>
+          </section>
 
           <p>
             To request a refund, please contact{' '}
@@ -58,9 +65,7 @@ export default function RefundsPage() {
 
           <p>
             Approved refunds are typically processed within 5–10 business days
-            to the original payment method. We reserve the right to deny refund
-            requests that appear fraudulent, abusive, or inconsistent with
-            normal use of the Service.
+            to the original payment method.
           </p>
         </div>
       </Container>
