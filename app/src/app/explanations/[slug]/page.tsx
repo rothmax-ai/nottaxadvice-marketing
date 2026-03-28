@@ -3,6 +3,7 @@ import { Container } from '@/components/container'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
+import { getFallbackExplanation } from '@/data/explanations'
 import { client } from '@/sanity/lib/client'
 import { PortableText } from '@portabletext/react'
 
@@ -26,10 +27,14 @@ export default async function ExplanationPage({
 }) {
   const { slug } = await params
   const explanation = await getExplanation(slug)
+  const fallback = getFallbackExplanation(slug)
 
-  if (!explanation) {
+  if (!explanation && !fallback) {
     notFound()
   }
+
+  const title = explanation?.title ?? fallback?.title
+  const excerpt = explanation?.excerpt ?? fallback?.excerpt
 
   return (
     <main className="overflow-hidden">
@@ -50,12 +55,12 @@ export default async function ExplanationPage({
             </p>
 
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-              {explanation.title}
+              {title}
             </h1>
 
-            {explanation.excerpt && (
+            {excerpt && (
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                {explanation.excerpt}
+                {excerpt}
               </p>
             )}
           </header>
@@ -69,7 +74,31 @@ export default async function ExplanationPage({
               prose-p:leading-7
               prose-li:leading-7"
           >
-            <PortableText value={explanation.body} />
+            {explanation?.body ? (
+              <PortableText value={explanation.body} />
+            ) : (
+              fallback?.sections.map((section) => (
+                <section key={section.title} className="not-prose mt-12 first:mt-0">
+                  <h2 className="text-2xl font-semibold tracking-tight text-gray-950">
+                    {section.title}
+                  </h2>
+
+                  <div className="mt-4 space-y-4 text-lg leading-8 text-gray-600">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+
+                  {section.bullets && (
+                    <ul className="mt-6 list-disc space-y-3 pl-6 text-lg leading-8 text-gray-600">
+                      {section.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              ))
+            )}
           </div>
         </article>
       </Container>

@@ -5,6 +5,8 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 
+const APP_URL = 'https://app.nottaxadvice.ai'
+
 export default function ExplanationsIndex() {
   return (
     <main className="overflow-hidden">
@@ -223,7 +225,7 @@ export default function ExplanationsIndex() {
         </p>
 
         <div className="mt-4 flex justify-center gap-6 text-sm font-medium">
-          <Link href="/analysis" className="text-gray-900">
+          <Link href={APP_URL} className="text-gray-900">
             Try the calculator →
           </Link>
           <Link href="/explanations" className="text-gray-900">

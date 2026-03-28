@@ -36,7 +36,7 @@ const tiers = [
     description: 'Use as much as you want, when you want.',
     price: '$9.99',
     highlights: [
-      '2,000 credits (launch pricing)',
+      '1,000 credits',
       'All features included',
       'Credits never expire',
       'Buy more anytime',
@@ -53,8 +53,8 @@ function Header() {
     <Container className="mt-16">
       <Heading as="h1">Simple pricing. No subscriptions.</Heading>
       <Lead className="mt-6 max-w-3xl">
-        NotTaxAdvice uses a credit based model. Use credits only when you run analysis.
-        No subscriptions. No expirations. No surprises.
+        NotTaxAdvice uses a credit based model. Use credits only when you run
+        analysis. No subscriptions. No expirations. No surprises.
       </Lead>
     </Container>
   )
@@ -83,7 +83,7 @@ function PricingCards() {
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   return (
-    <div className="-m-2 rounded-4xl ring-1 ring-black/5 shadow-[inset_0_0_2px_1px_#ffffff4d]">
+    <div className="-m-2 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5">
       <div className="rounded-4xl p-2 shadow-md shadow-black/5">
         <div className="rounded-3xl bg-white p-10 shadow-2xl ring-1 ring-black/5">
           {/* Tier label */}
@@ -117,7 +117,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
                   key={text}
                   className="flex items-start gap-3 text-base leading-7 text-gray-900"
                 >
-                  <CheckIcon className="mt-1 size-4 text-green-600 shrink-0" />
+                  <CheckIcon className="mt-1 size-4 shrink-0 text-green-600" />
                   {text}
                 </li>
               ))}
@@ -145,7 +145,7 @@ function FAQ({ q, a }: { q: string; a: string }) {
 function FrequentlyAskedQuestions() {
   return (
     <Container>
-       <div className="mt-14"></div>
+      <div className="mt-14"></div>
       <section id="faqs" className="scroll-mt-8">
         <Subheading className="text-center">
           Frequently asked questions
@@ -156,7 +156,10 @@ function FrequentlyAskedQuestions() {
         </Heading>
 
         <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
-          <FAQ q="Do credits expire?" a="Credits stay in your account until you use them whether that’s today, next month or a year from now. There are no deadlines, resets or forced usage windows." />
+          <FAQ
+            q="Do credits expire?"
+            a="Credits stay in your account until you use them whether that’s today, next month or a year from now. There are no deadlines, resets or forced usage windows."
+          />
 
           <FAQ
             q="Do I need a credit card to try it?"
@@ -178,8 +181,6 @@ function FrequentlyAskedQuestions() {
     </Container>
   )
 }
-
-
 
 /* -------------------------------------------------------------------------- */
 /*                                   PAGE                                     */

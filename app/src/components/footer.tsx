@@ -24,7 +24,7 @@ function CallToAction() {
         </p>
       </hgroup>
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        No account required. Educational demo only.
+        No credit card required. Educational only.
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href={APP_URL}>
