@@ -15,7 +15,7 @@ const links = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/company', label: 'Company' },
   { href: '/explanations', label: 'Explanations' },
-  { href: '/#', label: 'Login (coming soon)' },
+  { href: 'https://app.nottaxadvice.ai', label: 'Login' },
 ]
 
 function DesktopNav() {

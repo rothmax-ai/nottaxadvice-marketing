@@ -6,6 +6,8 @@ import { Link } from './link'
 import { Logo } from './logo'
 import { Subheading } from './text'
 
+const APP_URL = 'https://app.nottaxadvice.ai'
+
 /* -------------------------------------------------------------------------- */
 /*                               CALL TO ACTION                                */
 /* -------------------------------------------------------------------------- */
@@ -25,9 +27,8 @@ function CallToAction() {
         No account required. Educational demo only.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="/company">
-          See the demo
-          <br /> (Coming Soon)
+        <Button className="w-full sm:w-auto" href={APP_URL}>
+          Get started
         </Button>
       </div>
     </div>

@@ -2,6 +2,8 @@ import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Heading, Lead, Subheading } from '@/components/text'
 
+const APP_URL = 'https://app.nottaxadvice.ai'
+
 
 /* -------------------------------------------------------------------------- */
 /*                                    HERO                                    */
@@ -163,9 +165,7 @@ function Team() {
           </p>
 
           <div className="mt-6">
-            <Button href="/explanations">
-              See how it works (coming soon)
-            </Button>
+            <Button href={APP_URL}>Get started</Button>
           </div>
         </div>
 

@@ -10,6 +10,8 @@ import { Heading, Subheading } from '@/components/text'
 import OldNewWaySection from "@/components/OldNewWaySection";
 import ProductExplanationSection from '@/components/ProductExplanationSection'
 
+const APP_URL = 'https://app.nottaxadvice.ai'
+
 function Hero() {
   return (
     <div className="relative">
@@ -39,13 +41,9 @@ function Hero() {
           </div>
 
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="/pricing">
-              Get 2,000 Pre-Launch Credits — $9.99
-              <br /> (Coming Soon)
-            </Button>
-            <Button variant="secondary" href="/company">
-              Try the Demo
-              <br /> (Coming Soon)
+            <Button href={APP_URL}>Try it now</Button>
+            <Button variant="secondary" href={APP_URL}>
+              Get started
             </Button>
           </div>
         </div>

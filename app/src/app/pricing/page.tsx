@@ -1,4 +1,3 @@
-import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { Footer } from '@/components/footer'
 import { Gradient, GradientBackground } from '@/components/gradient'
@@ -24,7 +23,6 @@ const tiers = [
     slug: 'free',
     description: 'Try everything. No card required.',
     price: 'Free',
-    cta: 'Start free (Coming soon)',
     highlights: [
       '50 free credits',
       'Full access to all features',
@@ -37,7 +35,6 @@ const tiers = [
     slug: 'credits',
     description: 'Use as much as you want, when you want.',
     price: '$9.99',
-    cta: 'Buy credits (Coming soon)',
     highlights: [
       '2,000 credits (launch pricing)',
       'All features included',
@@ -104,10 +101,9 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
             {tier.price}
           </div>
 
-          {/* CTA */}
-          <div className="mt-8">
-            <Button href="#">{tier.cta}</Button>
-          </div>
+          <p className="mt-8 text-base font-medium text-gray-700">
+            Start free. Pay only if you want more.
+          </p>
 
           {/* Features */}
           <div className="mt-10">
