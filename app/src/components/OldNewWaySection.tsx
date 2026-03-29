@@ -1,3 +1,5 @@
+import { Screenshot } from '@/components/screenshot'
+
 export default function OldNewWaySection() {
   return (
     <section className="pt-8 pb-12 bg-gray-50">
@@ -47,15 +49,12 @@ export default function OldNewWaySection() {
               The <span className="text-red-600">new</span> way
             </h4>
             <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white">
-            <video
-                src="/videos/new-way.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-auto"
-            />
+              <Screenshot
+                width={779}
+                height={540}
+                src="/screenshots/new-way-not-tax-advice-ai.png"
+                className="w-full"
+              />
             </div>
             <p className="text-lg text-gray-950">Upload your return.</p>
 
